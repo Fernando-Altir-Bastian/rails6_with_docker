@@ -1,0 +1,28 @@
+version: '3'
+
+services:
+  web:
+    image: nginx
+    build:
+      context: .
+      dockerfile: ./nginx/Dockerfile
+    depends_on:
+      - app
+    ports:
+      - 80:80
+
+  app:
+    build: .
+    volumes:
+      - ./NAME_RAILS_PROJECT:/NAME_RAILS_PROJECT
+    environment:
+      - RAILS_ENV=development
+      #- RAILS_ENV=production
+      - POSTGRES_USER=enter_the_user_postgres
+      - POSTGRES_PASSWORD=enter_the_password_postgres
+      - POSTGRES_HOST="enter_the_ip_connection_postgres"
+
+networks:
+  default:
+      external:
+          name: name_network_connection_bd

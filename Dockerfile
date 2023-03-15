@@ -1,7 +1,7 @@
 FROM ruby:2.7.1
 
 # add nodejs and yarn dependencies for the frontend
-ENV NODE_VERSION 12
+ENV NODE_VERSION 14
 
 RUN curl -sL https://deb.nodesource.com/setup_$NODE_VERSION.x | bash - && \
     curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - && \

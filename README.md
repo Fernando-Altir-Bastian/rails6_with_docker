@@ -63,10 +63,12 @@ Here are the technologies used in this project.
 >   $ docker compose run app rails new . -d postgresql -T
 
 * Add this Gems to Gemfile
+    ```
     gem 'net-http', require: false
     gem 'net-imap', require: false
     gem 'net-protocol', require: false
     gem 'net-smtp', require: false  
+    ```
 
 * Build de project:
 >    $ docker compose build

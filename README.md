@@ -60,10 +60,16 @@ Here are the technologies used in this project.
     ```
 
 * Access the project name folder and run the command to create the Ruby On Rails project:
->   $ docker-compose run app rails new . -d postgresql -T
-    
+>   $ docker compose run app rails new . -d postgresql -T
+
+* Add this Gems to Gemfile
+    gem 'net-http', require: false
+    gem 'net-imap', require: false
+    gem 'net-protocol', require: false
+    gem 'net-smtp', require: false  
+
 * Build de project:
->    $ docker-compose build
+>    $ docker compose build
 
 * In the file "database.yml" add to the method "default: &default", data for connection to postgres:
     ```
@@ -93,14 +99,14 @@ Here are the technologies used in this project.
     ```
 
 * Create de BD of project
->   $ docker-compose run --rm app rails db:create
+>   $ docker compose run --rm app rails db:create
 
 * To run the project:
->    $ docker-compose up
+>    $ docker compose up
 
 ## Versioning of this project 
 
-release_v_beta_0_0_1
+    release_v_beta_0_0_1
 
 
 ## Authors

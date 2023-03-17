@@ -52,6 +52,12 @@ Here are the technologies used in this project.
 * Yet in the file "docker-compose.yml" change the line 28, the word "name_network_connection_bd" to the bd connection name that created in dockerize PostgreSQL
     ```
     name: name_network_connection_bd
+
+    If you do not use a PostgreSQL dockirization on the same machine, then comment lines 25 to 28.
+    networks:
+        default:
+            external: true
+            name: name_network_connection_bd
     ```
 
 * In the file "Dockerfile" change the line 14, the word "NAME_RAILS_PROJECT" to your name Rails Project:

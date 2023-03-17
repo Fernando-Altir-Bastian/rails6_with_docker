@@ -53,11 +53,12 @@ Here are the technologies used in this project.
     ```
     name: name_network_connection_bd
 
-    If you do not use a PostgreSQL dockirization on the same machine, then comment lines 25 to 28.
-    networks:
-        default:
-            external: true
-            name: name_network_connection_bd
+    * If you do not use a PostgreSQL dockirization on the same machine, then comment lines 25 to 28.
+    
+    # networks:
+    #    default:
+    #        external: true
+    #        name: name_network_connection_bd
     ```
 
 * In the file "Dockerfile" change the line 14, the word "NAME_RAILS_PROJECT" to your name Rails Project:

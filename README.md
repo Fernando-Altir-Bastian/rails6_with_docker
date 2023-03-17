@@ -53,7 +53,7 @@ Here are the technologies used in this project.
     ```
     name: name_network_connection_bd
 
-    * If you do not use a PostgreSQL dockirization on the same machine, then comment lines 25 to 28.
+    * If you do not use a PostgreSQL dockirization on the same machine, then comment lines 25 to 28 as below:
     
     # networks:
     #    default:
